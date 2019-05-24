@@ -1,0 +1,35 @@
+name: bitcoinc-qt
+version: "1.0.1"
+summary: Bitcoin Confidential
+description: 'Bitcoin Confidential full node'
+
+grade: stable
+confinement: strict
+base: core
+
+apps:
+  bitcoinc-qt:
+    command: bin/bitcoinc-qt
+    plugs: [wayland, x11, unity7, desktop, desktop-legacy, network, network-bind, home]
+
+parts:
+  bitcoinc-project:
+    plugin: dump
+    source: https://github.com/Bitcoin-Confidential/BitcoinC-Core/releases/download/v1.0.1/bitcoinc-1.0.1-x86_64-linux-gnu.tar.gz
+    stage-packages: 
+      - libssl-dev
+      - libevent-dev
+      - bsdmainutils
+      - python3
+      - libboost-system-dev
+      - libboost-filesystem-dev
+      - libboost-chrono-dev
+      - libboost-test-dev
+      - libboost-thread-dev
+      - libqt5gui5
+      - libqt5core5a
+      - libqt5dbus5
+      - qttools5-dev
+      - qttools5-dev-tools
+      - libprotobuf-dev
+
