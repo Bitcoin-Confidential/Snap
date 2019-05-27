@@ -1,5 +1,5 @@
-name: bitcoinc-qt
-version: "1.0.1"
+name: confidential-bitcoin
+version: "1.0.2"
 summary: Bitcoin Confidential
 description: 'Bitcoin Confidential full node'
 
@@ -15,7 +15,7 @@ apps:
 parts:
   bitcoinc-project:
     plugin: dump
-    source: https://github.com/Bitcoin-Confidential/BitcoinC-Core/releases/download/v1.0.1/bitcoinc-1.0.1-x86_64-linux-gnu.tar.gz
+    source: https://github.com/Bitcoin-Confidential/BitcoinC-Core/releases/download/v1.0.2/bitcoinc-1.0.2-x86_64-linux-gnu.tar.gz
     stage-packages: 
       - libssl-dev
       - libevent-dev
